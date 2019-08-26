@@ -1,12 +1,38 @@
 import React, { Component } from "react";
 
 class Navbar extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
+
+  displayNavbar = () => {
+    return (
+      <div>
+        <nav className="nav-wrapper indigo">
+          <div className="container">
+            <a href="#" className="sidenav-trigger" data-target="mobile-links">
+              <i className="material-icons">menu</i>
+            </a>
+
+            <ul className="right hide-on-med-and-down">
+              <li>link 1</li>
+              <li>link 2</li>
+              <li>link 3</li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul className="sidenav" id="mobile-links">
+          <li>link 1</li>
+          <li>link 2</li>
+          <li>link 3</li>
+        </ul>
+      </div>
+    );
+  };
 
   render() {
-    return <div>the navbar</div>;
+    return <div>{this.displayNavbar()}</div>;
   }
 }
 
