@@ -1,10 +1,22 @@
 import React, { Component } from "react";
-// import MenuIcon from "@material-ui/icons/Menu";
+import $ from "jquery";
+import M from "materialize-css";
 
 class Navbar extends Component {
   // constructor() {
   //   super();
   // }
+
+  componentDidMount() {
+    // $(document).ready(() => {
+    //   debugger;
+    //   $(".sidenav").sidenav();
+    // });
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".sidenav");
+      M.Sidenav.init(elems);
+    });
+  }
 
   displayNavbar = () => {
     return (
@@ -30,6 +42,12 @@ class Navbar extends Component {
         </ul>
       </div>
     );
+  };
+
+  toggleSideNav = () => {
+    $(document).ready(function() {
+      $(".sidenav").sidenav();
+    });
   };
 
   render() {
