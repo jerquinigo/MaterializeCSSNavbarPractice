@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import MenuIcon from "@material-ui/icons/Menu";
 
 class Navbar extends Component {
   // constructor() {
@@ -35,5 +36,7 @@ class Navbar extends Component {
     return <div>{this.displayNavbar()}</div>;
   }
 }
+
+// <i className="material-icons">Menu</i>
 
 export default Navbar;
