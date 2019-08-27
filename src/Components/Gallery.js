@@ -12,6 +12,11 @@ class Gallery extends Component {
       var elems = document.querySelectorAll(".materialboxed");
       M.Materialbox.init(elems);
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".parallax");
+      M.Parallax.init(elems);
+    });
   }
 
   displayImage = () => {
@@ -27,8 +32,36 @@ class Gallery extends Component {
     );
   };
 
+  displayParallax = () => {
+    return (
+      <div className="parallax-container">
+        <div className="parallax">
+          <img src="https://i.redd.it/bu9of8tx87l01.png" alt="" />
+        </div>
+      </div>
+    );
+  };
+
   render() {
-    return <div>{this.displayImage()}</div>;
+    return (
+      <div>
+        {this.displayImage()}
+        <br />
+        {this.displayParallax()}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    );
   }
 }
 

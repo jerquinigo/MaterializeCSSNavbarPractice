@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Gallery />
-      <p>hello world</p>
     </div>
   );
 }
